@@ -1,17 +1,14 @@
 package cl.ey.bci.response;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class Message {
-    private String mensaje;
-
-    public Message(String message) {
-        this.mensaje = message;
-    }
-
-    public String getMessage() {
-        return mensaje;
-    }
-
-    public void setMessage(String message) {
-        this.mensaje = message;
-    }
+	private String mensaje;
 }

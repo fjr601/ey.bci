@@ -7,10 +7,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
 @Table(name = "phones")
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class Phone {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -23,48 +31,4 @@ public class Phone {
 
 	@Column(name = "contrycode")
 	private int contrycode;
-
-	public Phone() {
-		super();
-	}
-
-	public Phone(int number, int citycode, int contrycode, User user) {
-		super();
-		this.number = number;
-		this.citycode = citycode;
-		this.contrycode = contrycode;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public int getNumber() {
-		return number;
-	}
-
-	public void setNumber(int number) {
-		this.number = number;
-	}
-
-	public int getCitycode() {
-		return citycode;
-	}
-
-	public void setCitycode(int citycode) {
-		this.citycode = citycode;
-	}
-
-	public int getContrycode() {
-		return contrycode;
-	}
-
-	public void setContrycode(int contrycode) {
-		this.contrycode = contrycode;
-	}
-
 }
